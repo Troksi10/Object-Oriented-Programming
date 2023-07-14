@@ -1,6 +1,8 @@
 ﻿
 using OOP;
 
+Car myCar = new Car();
+myCar.Details();
 Car audi = new Car("Audi A4",250,"red");
 audi.Drive();
 audi.Details();

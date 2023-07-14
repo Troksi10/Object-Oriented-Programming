@@ -12,8 +12,16 @@ namespace OOP
         private int _hp;
         private string _color;
 
+        // Default Constructor
+        public Car()
+        {
+            _name = "Car";
+            _hp = 0;
+            _color = "blue";
+        }
+
         // Constructor
-         public Car(string name, int hp = 0, string color = "black")
+        public Car(string name, int hp = 0, string color = "black")
         {
             _name = name;
             Console.WriteLine(name + " was created.");
