@@ -2,15 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP
 {
     internal class Car
-    { 
+    {
+        // access modifier private
         private string _name;
         private int _hp;
         private string _color;
+        private int _maxSpeed;
+
+        public int MaxSpeed { 
+            set
+            {
+                _maxSpeed = value;
+            } 
+        } 
+
+        // the public property
+        public string Name { 
+            get { return _name; } // get accessor
+            set { _name = value; }  // set accessor
+        }
 
         // Default Constructor
         public Car()
@@ -18,10 +32,21 @@ namespace OOP
             _name = "Car";
             _hp = 0;
             _color = "blue";
+            _maxSpeed= 150;
         }
 
-        // Constructor
-        public Car(string name, int hp = 0, string color = "black")
+        //Partial Constructor
+        public Car(string name, int hp = 0)
+        {
+            _name = name;
+            Console.WriteLine(name + " was created.");
+            _hp = hp;
+            _color = "red";
+        }
+
+        // Full Specification Constructor
+
+        public Car(string name, int hp, string color)
         {
             _name = name;
             Console.WriteLine(name + " was created.");
